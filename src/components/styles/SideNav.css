@@ -1,0 +1,56 @@
+.sideNav-container{
+    width: 15%;
+    height: 100vh;
+    background-color: #FFFFFF;
+    border-right: 0.1px solid #dbd9d3;
+}
+
+/* LOGO SECTION STYLES */
+.logo-section{
+    text-align: center;
+    margin-top: 10%;
+}
+.logo{
+    width: 80%;
+    height: 25%;
+    border-radius: 5px;
+}
+
+/* SIDENAV LINKS STYLES */
+.appLinks-container{
+    margin-top: 20%;
+}
+a{
+    text-decoration: none;
+}
+.appLinks-container ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+}
+.appLinks-container li{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    text-decoration: none;
+    margin-bottom: 10%;
+}
+.SideNav-active-link{
+    text-decoration: none;
+    border-right: 3px solid black;
+    width: 100%;
+    color: rgb(14, 0, 83);
+    font-weight: bold;
+}
+.SideNav-notactive-link{
+    text-decoration: none;
+    width: 100%;
+    color: rgb(92, 91, 98);
+    font-weight: bold;
+}
+.dashboard-icon{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
