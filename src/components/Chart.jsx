@@ -115,7 +115,7 @@ export const Chart = () => {
 
   return (
     <div className='chart-container'>
-      <LineChart  width={responsiveWidth} height={responsiveHeight} data={data}>
+      <LineChart  width={responsiveWidth} height={110} data={data}>
         <Line  type="monotone" dataKey="pv" stroke="white" strokeWidth={2}  dot={{ stroke: 'white', strokeWidth: 3 }} />
       </LineChart>
     </div>

@@ -1,18 +1,20 @@
-import React from 'react'
 import { BodyNav } from '../components/BodyNav'
 import { ExtraWidgetForCurrentWeather } from '../components/ExtraWidgetForCurrentWeather'
 import { Forcast } from '../components/Forcast'
 import { WeatherWidget } from '../components/WeatherWidget'
 import './Styles/Home.css'
 
-export const Home = () => {
+export const Home = ({weather}) => {
+
+
+  console.log(weather)
 
   return (
     <div className='body-container'>
         <section className='body-middle-container'>
             <BodyNav />
-            <WeatherWidget />
-            <ExtraWidgetForCurrentWeather />
+            <WeatherWidget weather={weather}/>
+            <ExtraWidgetForCurrentWeather weather={weather}/>
         </section>
         <section className='body-right-container'>
             <Forcast />

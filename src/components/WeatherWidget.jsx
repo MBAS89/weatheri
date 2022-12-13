@@ -4,25 +4,10 @@ import './styles/WeatherWidget.css'
 import { UilLocationPoint, UilWind, UilThermometer, UilTear } from '@iconscout/react-unicons'
 import { Chart } from './Chart'
 import { data } from './Chart'
+import { formatToLocalTime } from '../services/weatherService'
 
-import getFormattedWeatherData from '../services/weatherService'
 
-export const WeatherWidget = () => {
-
-  const [ query, setQuery ] = useState({q: 'berlin'})
-  const [ units, setUnits ] = useState('metric')
-  const [ weather, setWeather ] = useState(null)
-
-  useEffect(()=>{
-    const fetchWeather = async () => {
-      await getFormattedWeatherData({ ...query, units })
-        .then(data => { setWeather(data) })
-    }
-    fetchWeather()
-  },[query, units])
-
-  console.log(weather)
-
+export const WeatherWidget = ({weather}) => {
 
   return (
     <div className='weatherWidget-container'>
@@ -32,10 +17,10 @@ export const WeatherWidget = () => {
             <div className='weatherWidget-left-up'>
               <div className='weatherWidget-left-up-location'>
                 <UilLocationPoint />
-                <h4>{weather.name}</h4>
+                <h4>{weather.name} | {weather.country}</h4>
               </div>
               <p>
-              Today 05:24 PM
+              {formatToLocalTime(weather.dt, weather.timezone, "hh:mm a")}
               </p>
             </div>
             <div className='weatherWidget-left-middle'>

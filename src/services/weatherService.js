@@ -27,7 +27,7 @@ const getWeatherData = (infoType, searchParams) => {
 }
 
 const formatCurrentWeather = (data) => {
-    console.log(data,'current') /// herer 
+    //console.log(data,'current') /// herer 
     const { 
         coord : { lat, lon },
         main : { temp, feels_like, temp_min, temp_max, pressure, humidity },
@@ -50,7 +50,8 @@ const formatForecastWeather = (data) => {
         return {
             title: formatToLocalTime(d.dt, timezone, 'ccc'),
             temp: d.temp.day,
-            icon: d.weather[0].icon
+            icon: d.weather[0].icon,
+            allDayTemp: d.temp 
         }
     })
 
@@ -78,6 +79,10 @@ const getFormattedWeatherData = async (searchParams) => {
     return { ...formattedCurrentWeather, ...formattedForecastWeather }  
 }
 
-const formatToLocalTime = (secs, zone, format = "cccc, dd, LLL, yyyy' | Local time: ' hh:mm a") => DateTime.fromSeconds(secs).setZone(zone).toFormat(format)
+const formatToLocalTime = (secs, zone, format = "cccc, dd, LLL, yyyy' | Now: ' hh:mm a") => DateTime.fromSeconds(secs).setZone(zone).toFormat(format)
+
+const iconUrl = (code) => `https://api.openweathermap.org/img/wn/${code}@2x.png`;
 
 export default getFormattedWeatherData
+
+export { formatToLocalTime, iconUrl }

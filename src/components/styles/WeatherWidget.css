@@ -4,7 +4,7 @@
     url(
 '../../images/sunnyClear.jpg');
     background-size: cover;
-    height: 50vh;
+    height: 20rem !important;
     width: 85%;
     margin: 4% auto;
     border-radius: 15px;
@@ -60,7 +60,7 @@
     -webkit-backdrop-filter: blur(4.6px);
     width: 90%;
     margin: 8% auto;
-    height: 85%;
+    height: 17rem;
 }
 .weatherWidget-right-glass-container p{
     color: white;

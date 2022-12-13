@@ -8,6 +8,8 @@ import { MoonPhase } from './MoonPhase'
 export const ExtraWidgetForCurrentWeather = () => {
     const [moonPhaseName,setMoonPhaseName] = useState('')
 
+    console.log(moonPhaseName)
+
   return (
     <section className='extraWidgetsConatiner'>
         <div className='extraWidget'>
