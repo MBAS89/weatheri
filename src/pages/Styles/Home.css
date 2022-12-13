@@ -1,0 +1,12 @@
+.body-container{
+    width: 85%;
+    display: flex;
+}
+.body-middle-container{
+    flex: 2.5;
+    border-right: 0.1px solid #dbd9d3;
+}
+.body-right-container{
+    flex: 1;
+    width: 50px;
+}

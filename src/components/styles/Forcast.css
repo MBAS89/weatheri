@@ -1,0 +1,94 @@
+.forcast-container{
+    margin: 0 auto;
+    width: 90%;
+}
+.forcast-heading{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 3rem;
+}
+
+/* Day Forcast Styles*/
+
+.today-forcast-container{
+    overflow: hidden;
+    position: relative;
+}
+.today-forcast-header{
+    font-size: 1.2rem;
+    margin-top: 3.1rem;
+}
+.forcast-hourly-container{
+    display: flex;
+    margin-top: 1rem;
+    width: 1000px;
+    transition: transform ease-in-out 2s;
+}
+.forcast-hourly-container:hover{
+    transform: translateX(-300px);
+}
+.hour-container{
+    background-color: #e7eff3;
+    width: 50px;
+    margin: 0.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0% 2%;
+    padding-top: 1%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.hour-container span{
+    margin-bottom: 10%;
+}
+.hour-container img{
+    width: 100%;
+    height: 50%;
+}
+.hour-temp{
+    margin-top: 15%;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Weekly Forcast Styles*/
+.this-week-forcast-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+.day-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    align-items: center;
+    height: 10vh;
+}
+.day-info{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.day-info div{
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+.day-info span{
+    text-align: left;
+}
+.day-temp{
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    flex: 1;
+}
+.day-cion-container{
+    flex: 1;
+    text-align: right;
+}
+.day-cion-container img{
+    width: 50%;
+    height: 50%;
+}

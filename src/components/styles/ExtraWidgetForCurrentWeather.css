@@ -1,0 +1,36 @@
+.extraWidgetsConatiner{
+    display: flex;
+    width: 87%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-bottom: 2%;
+}
+.extraWidget{
+    background-color: #e7eff3;
+    width: 40%;
+    margin: 1%;
+    padding: 1% 4%;
+    display: flex;
+    border-radius: 15px;
+}
+.extraWidget-info{
+    flex: 1;
+}
+.extraWidget-info h5{
+    font-size: 1.2rem;
+    line-height: 0;
+}
+.extraWidget-info p{
+    color: #7f8283;
+}
+.extraWidget-icon-container{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.extraWidget-icon-container img{
+    width: 65%;
+    height: 70%;
+    padding-left: 25%;
+}

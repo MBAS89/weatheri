@@ -1,0 +1,59 @@
+.bodyNav-container{
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+}
+.bodyNav-search-input{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.bodyNav-search-input input{
+    width: 70%;
+    height: 3rem;
+    font-size: 1rem;
+    outline: none;
+    border-color: transparent;
+    text-transform: capitalize;
+    font-weight: bold;
+    border-bottom: 1px solid rgb(212, 212, 212);
+}
+.bodyNav-search-icon{
+    color: black;
+    cursor: pointer;
+    transition: ease-out;
+}
+.bodyNav-search-icon:hover{
+    transform: scale(1.1);
+}
+.bodynav-location-icon{
+    padding-left: 1rem;
+    transition: ease-out;
+    cursor: pointer;
+}
+.bodynav-location-icon:hover{
+    transform: scale(1.1);
+}
+.bodynav-Celsius-icon{
+    margin-left: 5.5rem;
+    cursor: pointer;
+    padding: 0 1%;
+}
+.bodynav-Fahrenheit-icon{
+    cursor: pointer;
+    padding: 0 1%;
+}
+.bodynav-Celsius-icon:hover{
+    transform: scale(1.1);
+}
+.bodynav-Fahrenheit-icon:hover{
+    transform: scale(1.1);
+}
+
+/*
+@media (max-width: 480px) {
+    .bodyNav-search-input input {
+      background-color: red;
+    }
+}
+*/

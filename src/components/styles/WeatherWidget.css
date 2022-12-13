@@ -1,0 +1,89 @@
+.weatherWidget-container{
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.732), rgba(0, 0, 0, 0.704)),
+    url(
+'../../images/sunnyClear.jpg');
+    background-size: cover;
+    height: 50vh;
+    width: 85%;
+    margin: 4% auto;
+    border-radius: 15px;
+    display: flex;
+}
+.weatherWidget-left{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.weatherWidget-left-up{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 25%;
+    color: white;
+    padding: 0% 4%;
+}
+.weatherWidget-left-up-location{
+    display: flex;
+    align-items: center;
+}
+.weatherWidget-left-middle{
+    height: 50%;
+    text-align: center;
+    color: white;
+}
+.weatherWidget-left-middle h1{
+    font-size: 7rem;
+    margin-top: -1rem;
+}
+.weatherWidget-left-middle p{
+    margin-top: -5rem;
+    margin-left: -1.4rem;
+}
+.weatherWidget-left-bottom{
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+.weatherWidget-left-bottom div{
+    display: flex;
+    align-items: center;
+}
+.weatherWidget-right{
+    flex: 1;
+}
+.weatherWidget-right-glass-container{
+    background: rgba(255, 255, 255, 0.28);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.6px);
+    -webkit-backdrop-filter: blur(4.6px);
+    width: 90%;
+    margin: 8% auto;
+    height: 85%;
+}
+.weatherWidget-right-glass-container p{
+    color: white;
+    font-size: 1.5rem;
+    padding-top: 5%;
+    padding-left: 5%;
+}
+.weatherWidget-right-glass-container div{
+    display: flex;
+}
+.weatherWidget-right-glass-daytime-container{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+.weatherWidget-right-glass-daytime-container div{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    color: white;
+}
+.weatherWidget-right-glass-daytime-container h5{
+    font-size: 1rem;
+}
