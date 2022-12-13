@@ -24,33 +24,33 @@ export const WeatherWidget = ({weather}) => {
               </p>
             </div>
             <div className='weatherWidget-left-middle'>
-              <h1>14°</h1>
-              <p>Mostly Clear</p>
+              <h1>{(weather.temp).toFixed()}°</h1>
+              <p>{weather.details}</p>
             </div>
             <div className='weatherWidget-left-bottom'>
               <div>
                 <UilWind />
-                <p>12km/h</p>
+                <p>{(weather.speed).toFixed()}km/h</p>
               </div>
               <div>
                 <UilThermometer />
-                <p>17°</p>
+                <p>{(weather.feels_like).toFixed()}°</p>
               </div>
               <div>
                 <UilTear />
-                <p>32%</p>
+                <p>{(weather.humidity).toFixed()}%</p>
               </div>
             </div>
           </div>
           <div className='weatherWidget-right'>
             <div className='weatherWidget-right-glass-container'>
               <p>Temperature</p>
-              <Chart />
+              <Chart data={weather}/>
               <div className='weatherWidget-right-glass-daytime-container'>
-                {data.map((day)=>(
+                {weather?.daily[0].allDayTemp.map((day)=>(
                   <div key={day.name}>
                     <span>{day.name}</span>
-                    <h5>{day.pv}°</h5>
+                    <h5>{(day.temp).toFixed()}°</h5>
                   </div>
                 ))}
               </div>

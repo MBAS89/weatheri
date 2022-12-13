@@ -35,6 +35,7 @@
 .weatherWidget-left-middle h1{
     font-size: 7rem;
     margin-top: -1rem;
+    letter-spacing: 5px;
 }
 .weatherWidget-left-middle p{
     margin-top: -5rem;
@@ -85,5 +86,9 @@
     color: white;
 }
 .weatherWidget-right-glass-daytime-container h5{
+    font-size: 1rem;
+}
+.weatherWidget-right-glass-daytime-container span{
+    text-transform: capitalize;
     font-size: 1rem;
 }

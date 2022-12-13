@@ -17,7 +17,7 @@ export const Home = ({weather}) => {
             <ExtraWidgetForCurrentWeather weather={weather}/>
         </section>
         <section className='body-right-container'>
-            <Forcast />
+            <Forcast weather={weather}/>
         </section>
     </div>
   )

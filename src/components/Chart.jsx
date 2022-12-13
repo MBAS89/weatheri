@@ -2,79 +2,23 @@ import React, { useState, useEffect } from 'react'
 import './styles/Chart.css'
 import { LineChart, Line } from "recharts";
 
-export const data = [
-  {
-    name: "Morning",
-    pv: 0
-  },
-  {
-    name: "AfterNon",
-    pv: 14
-  },
-  {
-    name: "Evning",
-    pv: 16
-  },
-  {
-    name: "Night",
-    pv: 30
-  }
-];
+export const Chart = ({data}) => {
 
-export const Chart = () => {
+  const [weatherData, setWeatherData] = useState(data)
 
-  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
-  const [responsiveHeight, setResponsiveHeight] = useState(140)
+  useEffect(()=>{
+    setWeatherData(data?.daily[0].allDayTemp)
+  },[data])
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
   const [responsiveWidth, setResponsiveWidth] = useState(270)
 
   useEffect(() => {
     function handleResize() {
-      setWindowHeight(window.innerHeight);
       setWindowWidth(window.innerWidth);
     }
 
     window.addEventListener('resize', handleResize);
-
-    switch (true) {
-      case (windowHeight > 672):
-        setResponsiveHeight(140);
-        break;
-      case (windowHeight < 672 && windowHeight > 627):
-        setResponsiveHeight(120);
-        break;
-      case (windowHeight < 627 && windowHeight > 600):
-        setResponsiveHeight(110);
-        break;
-      case (windowHeight < 600 && windowHeight > 580):
-        setResponsiveHeight(100);
-        break;
-      case (windowHeight < 580 && windowHeight > 550):
-        setResponsiveHeight(90);
-        break;
-      case (windowHeight < 550 && windowHeight > 535):
-        setResponsiveHeight(80);
-        break;
-      case (windowHeight < 535 && windowHeight > 500):
-        setResponsiveHeight(70);
-        break;
-      case (windowHeight < 500 && windowHeight > 475):
-        setResponsiveHeight(60);
-        break;
-      case (windowHeight < 475 && windowHeight > 450):
-        setResponsiveHeight(50);
-        break;
-      case (windowHeight < 450 && windowHeight > 430):
-        setResponsiveHeight(40);
-        break;
-      case (windowHeight < 430 && windowHeight > 400):
-        setResponsiveHeight(30);
-        break;
-      case (windowHeight < 400):
-        setResponsiveHeight(20);
-        break;
-    }
 
     //width part 
     switch (true) {
@@ -111,12 +55,12 @@ export const Chart = () => {
       window.removeEventListener('resize', handleResize);
     };
     
-  }, [windowHeight, windowWidth]);
+  }, [windowWidth]);
 
   return (
     <div className='chart-container'>
-      <LineChart  width={responsiveWidth} height={110} data={data}>
-        <Line  type="monotone" dataKey="pv" stroke="white" strokeWidth={2}  dot={{ stroke: 'white', strokeWidth: 3 }} />
+      <LineChart  width={responsiveWidth} height={110} data={weatherData}>
+        <Line  type="monotone" dataKey="temp" stroke="white" strokeWidth={2}  dot={{ stroke: 'white', strokeWidth: 3 }} />
       </LineChart>
     </div>
   )
